@@ -40,9 +40,9 @@ document.addEventListener('DOMContentLoaded', () => {
     filteredTodos.forEach((todo) => {
       const index = todos.indexOf(todo);
       const li = document.createElement('li');
-      li.className = `list-group-item d-flex justify-content-between align-items-center ${todo.completed ? 'completed' : ''}`;
+      li.className = 'list-group-item d-flex justify-content-between align-items-center';
       li.innerHTML = `
-                <span class="todo-text" data-index="${index}">${todo.text}</span>
+                <span class="todo-text ${todo.completed ? 'completed' : ''}" data-index="${index}">${todo.text}</span>
                 <button class="btn btn-danger btn-sm delete-button" data-index="${index}">Delete</button>
             `;
       todoList.appendChild(li);
